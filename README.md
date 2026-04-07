@@ -1,1 +1,176 @@
-# panelvip.html
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>Free Fire VIP Panel</title>
+
+<style>
+
+body{
+background:#000;
+font-family:Arial;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+}
+
+.panel{
+width:380px;
+background:#111;
+padding:20px;
+border-radius:15px;
+border:1px solid white;
+box-shadow:0 0 15px white;
+}
+
+.title{
+text-align:center;
+font-size:24px;
+font-weight:bold;
+margin-bottom:20px;
+}
+
+.menu{
+margin-bottom:15px;
+}
+
+label{
+display:block;
+margin-bottom:5px;
+}
+
+select, input[type=range]{
+width:100%;
+}
+
+.toggle{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-top:5px;
+}
+
+.value{
+font-size:12px;
+margin-top:5px;
+}
+
+button{
+width:100%;
+padding:10px;
+margin-top:15px;
+border:none;
+border-radius:8px;
+background:white;
+color:black;
+font-weight:bold;
+cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="panel">
+
+<div class="title">FREE FIRE VIP PANEL</div>
+
+<!-- เลือกตัวเกม -->
+<div class="menu">
+<label>เลือกตัวเกม</label>
+<select>
+<option>ธรรมดา</option>
+<option>แม็ก</option>
+</select>
+</div>
+
+<!-- ล็อกหัว -->
+<div class="menu">
+<div class="toggle">
+<label>ล็อกหัว</label>
+<input type="checkbox">
+</div>
+</div>
+
+<!-- โหมดการเล่น -->
+<div class="menu">
+<label>โหมดการเล่น</label>
+<select>
+<option>แรงค์ใหญ่</option>
+<option>ห้องซ้อม</option>
+<option>ไฮไลท์</option>
+</select>
+</div>
+
+<!-- PENGUIN DPI -->
+<div class="menu">
+<label>PENGUIN DPI SETTING</label>
+
+<div class="toggle">
+<span>SETTING ดูดหัว</span>
+<input type="checkbox">
+</div>
+
+<div class="toggle">
+<span>DPI 8392</span>
+<input type="checkbox">
+</div>
+
+<div class="toggle">
+<span>ทัชไว จอลื่น</span>
+<input type="checkbox">
+</div>
+
+<div class="toggle">
+<span>ออโต้กันแบนพิเศษ</span>
+<input type="checkbox">
+</div>
+
+</div>
+
+<!-- ความไว -->
+<div class="menu">
+<label>ความไวหน้าจอ</label>
+<input type="range" min="1" max="1000" value="500" id="sens">
+<div class="value">Sensitivity: <span id="sensv">500</span>%</div>
+</div>
+
+<!-- Speed -->
+<div class="menu">
+<label>Speed Factor</label>
+<input type="range" min="1" max="100" value="50" id="speed">
+<div class="value">Speed: <span id="speedv">50</span>%</div>
+</div>
+
+<button onclick="startPanel()">START PANEL</button>
+
+</div>
+
+<script>
+
+let sens = document.getElementById("sens")
+let sensv = document.getElementById("sensv")
+
+sens.oninput = function(){
+sensv.innerText = this.value
+}
+
+let speed = document.getElementById("speed")
+let speedv = document.getElementById("speedv")
+
+speed.oninput = function(){
+speedv.innerText = this.value
+}
+
+function startPanel(){
+alert("Free Fire VIP Panel ทำงานแล้ว")
+}
+
+</script>
+
+</body>
+</html>
